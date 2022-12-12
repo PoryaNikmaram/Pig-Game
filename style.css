@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    background-image: linear-gradient(to top left, #753682, #bf2e34);
+    height: 100vh;
+    line-height: 1.5;
+}
+
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgba(255, 255, 255, 0.400);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.player {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player h2 {
+    font-size: 25px;
+    word-spacing: 10px;
+    margin-bottom: 20px;
+}
+
+.active-player {
+    background-color: rgba(255, 255, 255, 0.450);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.score {
+    font-size: 40px;
+    color: #c7365f;
+    margin-bottom: 70px;
+}
+
+.current {
+    background-color: #c7365f;
+    color: #fff;
+    width: 180px;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.current h2,
+h3 {
+    font-weight: lighter;
+    margin: 0;
+}
+
+.dice {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.6rem 1.7rem;
+    border: none;
+    border-radius: 35px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn:active {
+    margin-top: 3px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.35);
+}
+
+.btn-new {
+    top: 15%;
+}
+
+.btn-roll {
+    top: 70%;
+}
+
+.btn-hold {
+    top: 80%;
+}
+
+.winner {
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: #333;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
